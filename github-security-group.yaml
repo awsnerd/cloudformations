@@ -1,0 +1,166 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Resources:
+  GithubSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      Tags:
+      - Key: Name
+        Value: 'github'
+      VpcId: 'vpc-c21ccab9'
+      GroupDescription: Enable outbound access to github
+      SecurityGroupEgress:
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 192.30.252.0/22
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 185.199.108.0/22
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 140.82.112.0/20
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 13.114.40.48/32
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 13.229.188.59/32
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 13.234.176.102/32
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 13.234.210.38/32
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 13.236.229.21/32
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 13.237.44.5/32
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 13.250.177.223/32
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 15.164.81.167/32
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 18.194.104.89/32
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 18.195.85.27/32
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 35.159.8.160/32
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 52.192.72.89/32
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 52.64.108.95/32
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 52.69.186.44/32
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 52.74.223.119/32
+      - IpProtocol: tcp
+        FromPort: 9418
+        ToPort: 9418
+        CidrIp: 52.78.231.108/3
+
+
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 192.30.252.0/22
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 185.199.108.0/22
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 140.82.112.0/20
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 13.114.40.48/32
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 13.229.188.59/32
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 13.234.176.102/32
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 13.234.210.38/32
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 13.236.229.21/32
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 13.237.44.5/32
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 13.250.177.223/32
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 15.164.81.167/32
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 18.194.104.89/32
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 18.195.85.27/32
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 35.159.8.160/32
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 52.192.72.89/32
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 52.64.108.95/32
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 52.69.186.44/32
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 52.74.223.119/32
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 52.78.231.108/3
